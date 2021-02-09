@@ -37,7 +37,7 @@ module.exports = {
         spreadsheetId:process.env.SPREADSHEET_ID,
         credentials:{
           client_email:process.env.CLIENT_EMAIL,
-          private_key:process.env.PRIVATE_KEY
+          private_key: process.env.PRIVATE_KEY.replace(new RegExp('\\\\n', '\g'), '\n')
         }
       }
     },
